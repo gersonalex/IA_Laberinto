@@ -8,3 +8,4 @@ let newMaze = new Maze(600, 10, 10, canvas, ctx);
 
 newMaze.setup();
 newMaze.draw();
+//newMaze.solveAStar();

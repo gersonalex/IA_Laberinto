@@ -1,4 +1,5 @@
 import Cell from "./cell.js";
+import SolveAStar from "./astarsolver.js";
 
 let generationComplete = false;
 let current;
@@ -13,6 +14,14 @@ export default class Maze {
         this.stack = [];
         this.canvas = canvas;
         this.ctx = ctx;
+
+        this.solving = false;
+        this.solved = false;
+    }
+
+    solveAStar(){
+        this.solving = true;
+        let solver = new SolveAStar(grid);
     }
 
     //Crea el grid para el laberinto, un array de array de rows
